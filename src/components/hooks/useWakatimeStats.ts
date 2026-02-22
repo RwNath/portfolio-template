@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { WakatimeStats } from "@/app/api/schemas/wakatimeStats";
+import type { WakatimeStats } from "@/app/api/schemas/wakatimeStats";
 
 export function useWakatimeStats() {
   return useQuery<WakatimeStats | null>({

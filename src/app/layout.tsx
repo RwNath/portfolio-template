@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import QueryClientProvider from "@/components/providers/QueryClientProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 
 const inter = Inter({ subsets: ["latin"] });

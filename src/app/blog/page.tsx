@@ -1,5 +1,5 @@
-import { DATA } from "@/data/resume";
 import { BlogCard } from "@/components/blog/layout/blog-card";
+import { DATA } from "@/data/resume";
 
 export default function BlogPage() {
     return (

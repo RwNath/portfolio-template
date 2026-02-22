@@ -1,4 +1,4 @@
-import { Globe, HomeIcon, NotebookIcon, Laptop } from "lucide-react";
+import { Globe, HomeIcon, Laptop, NotebookIcon } from "lucide-react";
 import { Icons } from "@/components/icons";
 
 export const DATA = {
@@ -109,7 +109,7 @@ export const DATA = {
         {
             title: "Portfolio-template",
             tag: "Release",
-            date: "2026-02-13",
+            date: "2026-02-22",
             description: "The portfolio template is out !",
             content: `Portfolio-template is a project that allows you to quickly generate a modern portfolio.
 

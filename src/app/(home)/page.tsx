@@ -1,21 +1,15 @@
 "use client";
 
+import { ArrowRight, Clock, Loader, MapPin, X } from "lucide-react";
 import Link from "next/link";
-
-import { DATA } from "@/data/resume";
-
-import Tag from "@/components/tag";
-import { ProjectCard } from "@/components/project-card";
-import { Icons } from "@/components/icons";
+import { useGithubStats } from "@/components/hooks/useGithubStats";
 import { useWakatimeStats } from "@/components/hooks/useWakatimeStats";
-
-import { ArrowRight, Clock, MapPin, Loader, X } from "lucide-react";
-
-import { useTime } from "@/utils-functions/time";
-
-import { useGithubStats } from "@/app/api/github/route";
-
+import { Icons } from "@/components/icons";
+import { ProjectCard } from "@/components/project-card";
+import Tag from "@/components/tag";
 import { Card, CardContent } from "@/components/ui/card";
+import { DATA } from "@/data/resume";
+import { useTime } from "@/utils-functions/time";
 
 export default function Home() {
     const time = useTime();

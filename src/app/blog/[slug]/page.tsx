@@ -1,10 +1,10 @@
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import { DATA } from "@/data/resume";
 import { slugify } from "@/lib/slugify";
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,28 +30,28 @@ export default async function BlogPostPage({ params }: Props) {
                 </header>
 
                 <section className="max-w-full text-muted-foreground">
-                    {post.description.split("\n\n").map((para, idx) => (
-                        <p key={idx}>{para}</p>
+                    {post.description.split("\n\n").map(para => (
+                        <p key={para}>{para}</p>
                     ))}
                 </section>
 
                 <Separator />
 
                 <section className="max-w-full text-muted-foreground">
-                    {post.content.split("\n\n").map((para, idx) => {
+                    {post.content.split("\n\n").map(para => {
                         if (para.trim().startsWith("-")) {
                             const items = para.split("\n").map(line => line.replace(/^\s*-\s*/, "").trim());
 
                             return (
-                                <ul key={idx} className="list-disc pl-6 space-y-1">
-                                    {items.map((item, i) => (
-                                        <li key={i}>{item}</li>
+                                <ul key={para} className="list-disc pl-6 space-y-1">
+                                    {items.map(item => (
+                                        <li key={item}>{item}</li>
                                     ))}
                                 </ul>
                             );
                         }
 
-                        return <p key={idx}>{para}</p>;
+                        return <p key={para}>{para}</p>;
                     })}
                 </section>
             </div>

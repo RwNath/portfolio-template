@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
     const [imageError, setImageError] = useState(false);
@@ -65,10 +65,10 @@ export function ProjectCard({ title, href, description, dates, tags, image, vide
                 </Link>
                 {links && links.length > 0 && (
                     <div className="absolute top-2 right-2 flex flex-wrap gap-2">
-                        {links.map((link, idx) => (
+                        {links.map(link => (
                             <Link
                                 href={link.href}
-                                key={idx}
+                                key={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={e => e.stopPropagation()}
