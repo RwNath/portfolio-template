@@ -78,7 +78,7 @@ export const DATA = {
         {
             title: "Portfolio",
             href: "https://rwnath.vercel.app/",
-            dates: "Nov 2025 - Present",
+            dates: "Oct 2025 - Present",
             active: true,
             description:
                 "My personal portfolio showcases my projects and achievements as a full-stack developer apprentice. It features a modern design, animations, and a dark theme for a smooth user experience. The portfolio serves both as a professional showcase and a space to experiment with my web development learning.",
